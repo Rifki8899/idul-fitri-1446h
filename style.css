@@ -228,8 +228,8 @@ html,body{min-height:100%;background:var(--dark);font-family:'Nunito',sans-serif
 .qris-phone{font-size:.68rem;color:#7A9A88;letter-spacing:.08em;margin-top:2px;}
 
 /* QR Image */
-.qris-img-wrap{position:relative;padding:16px 20px;background:rgba(255,255,255,.6);}
-.qris-img{width:100%;max-width:260px;display:block;margin:0 auto;border-radius:6px;image-rendering:crisp-edges;}
+.qris-img-wrap{position:relative;padding:16px 20px 0 20px;background:rgba(255,255,255,.6);overflow:hidden;}
+.qris-img{width:100%;max-width:260px;display:block;margin:0 auto;border-radius:6px 6px 0 0;image-rendering:crisp-edges;/* crop bottom 18% to hide QRIS logo watermark */object-fit:cover;object-position:top;max-height:280px;}
 .qris-overlay{position:absolute;inset:16px 20px;pointer-events:none;}
 .qo-corner{position:absolute;width:20px;height:20px;border-color:var(--gold);border-style:solid;border-width:0;}
 .qo-corner.tl{top:0;left:0;border-top-width:3px;border-left-width:3px;border-radius:4px 0 0 0;}
@@ -254,7 +254,7 @@ html,body{min-height:100%;background:var(--dark);font-family:'Nunito',sans-serif
 .qtb-ris{background:#fff;color:#333;font-size:.75rem;font-weight:900;padding:3px 6px;font-family:'Nunito',sans-serif;letter-spacing:.05em;}
 
 /* ══ QRIS SAVE BUTTON ══ */
-.qris-save-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;background:linear-gradient(135deg,var(--gold),#9A7820,var(--gold-l));color:var(--dark);border:none;border-radius:14px;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:800;letter-spacing:.05em;cursor:pointer;box-shadow:0 6px 24px rgba(201,168,76,.4);transition:all .25s cubic-bezier(.34,1.56,.64,1);margin-bottom:14px;}
-.qris-save-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 32px rgba(201,168,76,.55);}
+.qris-save-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 24px;background:linear-gradient(135deg,var(--gold),#9A7820,var(--gold-l));color:var(--dark);border:none;border-radius:30px;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:800;letter-spacing:.06em;cursor:pointer;box-shadow:0 4px 18px rgba(201,168,76,.4);transition:all .25s cubic-bezier(.34,1.56,.64,1);margin-bottom:14px;}
+.qris-save-btn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 28px rgba(201,168,76,.55);}
 .qris-save-btn:active{transform:scale(.97);}
-.qris-save-btn svg{width:19px;height:19px;flex-shrink:0;}
+.qris-save-btn svg{width:16px;height:16px;flex-shrink:0;stroke-width:2.5;}

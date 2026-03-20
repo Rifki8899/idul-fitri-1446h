@@ -278,23 +278,15 @@ function showToast(msg) {
 
 /* ══ SAVE QRIS IMAGE ══ */
 function saveQRIS() {
-  const img = document.getElementById('qrisImg');
-  if (!img) return;
-  // Draw to canvas then download
-  const canvas = document.createElement('canvas');
-  canvas.width = img.naturalWidth;
-  canvas.height = img.naturalHeight;
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0);
-  try {
-    const link = document.createElement('a');
-    link.download = 'QRIS-ShopeePay-RifkiMuhamad.jpg';
-    link.href = canvas.toDataURL('image/jpeg', 0.95);
-    link.click();
-    showToast('✅ Gambar QRIS berhasil disimpan!');
-  } catch(e) {
-    // Fallback: open image in new tab
-    window.open(img.src, '_blank');
-    showToast('📱 Tekan lama gambar → Simpan foto');
-  }
+  // Mobile friendly: open image directly so user can long-press save
+  const imgUrl = 'qris.jpg';
+  // Try anchor download first (works on desktop & some mobile)
+  const a = document.createElement('a');
+  a.href = imgUrl;
+  a.download = 'QRIS-ShopeePay-RifkiMuhamad.jpg';
+  a.target = '_blank';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showToast('📱 Gambar terbuka — tekan lama lalu "Simpan Gambar"');
 }
