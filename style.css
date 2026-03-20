@@ -205,3 +205,41 @@ html,body{min-height:100%;background:var(--dark);font-family:'Nunito',sans-serif
 /* ── RESPONSIVE ── */
 @media(max-width:440px){.ps-fields{grid-template-columns:1fr;}.ss-grid{grid-template-columns:1fr;}}
 @media(max-width:360px){.ht-line2{font-size:2rem;}.c-title{font-size:1.4rem;}}
+
+/* ══ QRIS THR SECTION ══ */
+.qris-section{padding:0 16px 40px;display:flex;justify-content:center;}
+.qris-box{width:min(440px,100%);text-align:center;}
+.qris-sparkle{font-size:1.8rem;margin-bottom:10px;animation:pulseO 2s ease-in-out infinite;}
+.qris-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,5vw,1.9rem);font-style:italic;background:linear-gradient(135deg,var(--gold-l),var(--gold),var(--gold-p));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;}
+.qris-subtitle{font-size:.78rem;color:rgba(201,168,76,.6);letter-spacing:.08em;margin-bottom:20px;}
+.qris-msg{background:rgba(11,51,38,.45);border:1px solid rgba(201,168,76,.22);border-radius:14px;padding:18px 20px;backdrop-filter:blur(12px);margin-bottom:20px;box-shadow:inset 0 1px 0 rgba(201,168,76,.07);}
+.qris-msg p{font-size:.83rem;color:var(--gold-p);line-height:1.85;margin-bottom:10px;}
+.qris-msg p:last-child{margin-bottom:0;}
+.qris-msg strong{color:var(--gold-l);}
+.qris-doa{font-family:'Cormorant Garamond',serif !important;font-size:.9rem !important;color:rgba(201,168,76,.75) !important;border-top:1px solid rgba(201,168,76,.2);padding-top:10px;margin-top:4px;}
+
+/* QRIS Card */
+.qris-card{background:linear-gradient(160deg,#FFFDF2,#FBF4E6,#EFE0A8);border-radius:18px;border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(201,168,76,.1),0 20px 60px rgba(0,0,0,.55);overflow:hidden;margin-bottom:14px;position:relative;}
+.qris-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 10%,rgba(201,168,76,.08),transparent 40%);pointer-events:none;}
+.qris-card-header{display:flex;align-items:center;gap:12px;padding:16px 18px 12px;border-bottom:1px solid rgba(201,168,76,.25);}
+.qris-logo{height:28px;object-fit:contain;flex-shrink:0;}
+.qris-name-wrap{text-align:left;}
+.qris-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#0B3326;letter-spacing:.05em;}
+.qris-phone{font-size:.68rem;color:#7A9A88;letter-spacing:.08em;margin-top:2px;}
+
+/* QR Image */
+.qris-img-wrap{position:relative;padding:16px 20px;background:rgba(255,255,255,.6);}
+.qris-img{width:100%;max-width:260px;display:block;margin:0 auto;border-radius:6px;image-rendering:crisp-edges;}
+.qris-overlay{position:absolute;inset:16px 20px;pointer-events:none;}
+.qo-corner{position:absolute;width:20px;height:20px;border-color:var(--gold);border-style:solid;border-width:0;}
+.qo-corner.tl{top:0;left:0;border-top-width:3px;border-left-width:3px;border-radius:4px 0 0 0;}
+.qo-corner.tr{top:0;right:0;border-top-width:3px;border-right-width:3px;border-radius:0 4px 0 0;}
+.qo-corner.bl{bottom:0;left:0;border-bottom-width:3px;border-left-width:3px;border-radius:0 0 0 4px;}
+.qo-corner.br{bottom:0;right:0;border-bottom-width:3px;border-right-width:3px;border-radius:0 0 4px 0;}
+
+.qris-badge{display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-top:1px solid rgba(201,168,76,.2);background:rgba(255,255,255,.3);}
+.qris-badge-img{height:22px;object-fit:contain;}
+.qris-badge span{font-size:.68rem;color:#4A6A58;font-weight:600;}
+
+.qris-note{font-size:.72rem;color:rgba(201,168,76,.55);letter-spacing:.05em;margin-bottom:12px;}
+.qris-thankyou{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;color:var(--gold-p);padding:14px 20px;background:rgba(11,51,38,.35);border:1px solid rgba(201,168,76,.2);border-radius:12px;line-height:1.7;}
