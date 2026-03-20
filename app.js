@@ -275,3 +275,26 @@ function showToast(msg) {
   t.textContent=msg; t.classList.add('show');
   clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),3200);
 }
+
+/* ══ SAVE QRIS IMAGE ══ */
+function saveQRIS() {
+  const img = document.getElementById('qrisImg');
+  if (!img) return;
+  // Draw to canvas then download
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth;
+  canvas.height = img.naturalHeight;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  try {
+    const link = document.createElement('a');
+    link.download = 'QRIS-ShopeePay-RifkiMuhamad.jpg';
+    link.href = canvas.toDataURL('image/jpeg', 0.95);
+    link.click();
+    showToast('✅ Gambar QRIS berhasil disimpan!');
+  } catch(e) {
+    // Fallback: open image in new tab
+    window.open(img.src, '_blank');
+    showToast('📱 Tekan lama gambar → Simpan foto');
+  }
+}

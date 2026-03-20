@@ -252,3 +252,9 @@ html,body{min-height:100%;background:var(--dark);font-family:'Nunito',sans-serif
 .qris-text-badge{display:inline-flex;align-items:center;border:2px solid #333;border-radius:6px;overflow:hidden;flex-shrink:0;}
 .qtb-q{background:#333;color:#fff;font-size:.75rem;font-weight:900;padding:3px 6px;font-family:'Nunito',sans-serif;letter-spacing:.05em;}
 .qtb-ris{background:#fff;color:#333;font-size:.75rem;font-weight:900;padding:3px 6px;font-family:'Nunito',sans-serif;letter-spacing:.05em;}
+
+/* ══ QRIS SAVE BUTTON ══ */
+.qris-save-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;background:linear-gradient(135deg,var(--gold),#9A7820,var(--gold-l));color:var(--dark);border:none;border-radius:14px;font-family:'Nunito',sans-serif;font-size:.88rem;font-weight:800;letter-spacing:.05em;cursor:pointer;box-shadow:0 6px 24px rgba(201,168,76,.4);transition:all .25s cubic-bezier(.34,1.56,.64,1);margin-bottom:14px;}
+.qris-save-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 32px rgba(201,168,76,.55);}
+.qris-save-btn:active{transform:scale(.97);}
+.qris-save-btn svg{width:19px;height:19px;flex-shrink:0;}
