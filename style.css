@@ -243,3 +243,12 @@ html,body{min-height:100%;background:var(--dark);font-family:'Nunito',sans-serif
 
 .qris-note{font-size:.72rem;color:rgba(201,168,76,.55);letter-spacing:.05em;margin-bottom:12px;}
 .qris-thankyou{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;color:var(--gold-p);padding:14px 20px;background:rgba(11,51,38,.35);border:1px solid rgba(201,168,76,.2);border-radius:12px;line-height:1.7;}
+
+/* ══ LOGO BADGES (no external images) ══ */
+.spay-badge{display:inline-flex;align-items:center;gap:4px;background:#EE4D2D;border-radius:8px;padding:5px 10px;flex-shrink:0;}
+.spay-s{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:#fff;border-radius:5px;font-size:.75rem;font-weight:900;color:#EE4D2D;}
+.spay-pay{font-size:.85rem;font-weight:800;color:#fff;letter-spacing:.02em;}
+
+.qris-text-badge{display:inline-flex;align-items:center;border:2px solid #333;border-radius:6px;overflow:hidden;flex-shrink:0;}
+.qtb-q{background:#333;color:#fff;font-size:.75rem;font-weight:900;padding:3px 6px;font-family:'Nunito',sans-serif;letter-spacing:.05em;}
+.qtb-ris{background:#fff;color:#333;font-size:.75rem;font-weight:900;padding:3px 6px;font-family:'Nunito',sans-serif;letter-spacing:.05em;}
